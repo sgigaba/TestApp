@@ -11,9 +11,6 @@
     <PackageReference Include="DevExtreme.AspNet.Core" Version="22.2.4" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="wwwroot\Images\R.jpg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

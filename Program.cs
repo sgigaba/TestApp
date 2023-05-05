@@ -1,7 +1,10 @@
+using TestApp.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages().AddJsonOptions(options => options.JsonSerializerOptions.PropertyNamingPolicy = null);
+builder.Services.AddScoped<PeopleService>();
 
 var app = builder.Build();
 
