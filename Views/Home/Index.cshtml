@@ -1,13 +1,13 @@
 ﻿@using DevExtreme.AspNet.Mvc;
 @{
-    ViewData["Title"] = "Index1";
+    ViewData["Title"] = "Index";
 }
 
-<h2>Index1</h2>
+<h2>Index</h2>
 
 @(Html.DevExtreme().DataGrid<TestApp.Models.Person>()
     .DataSource(ds => ds.Mvc()
-        .Controller("HomeController")
+        .Controller("HomeWebAPIController")
         .LoadAction("Get")
         .Key("Id")
     )
