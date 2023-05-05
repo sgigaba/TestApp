@@ -10,6 +10,7 @@
 Html.DevExtreme().DataGrid<TestApp.Models.Person>()
     .DataSource(ds => ds.Mvc()
         .Controller("HomeWebAPI")
+        .InsertAction("Add")
         .LoadAction("Get")
         .Key("Id")
     )
@@ -29,4 +30,8 @@ Html.DevExtreme().DataGrid<TestApp.Models.Person>()
 
         columns.AddFor(m => m.Age);
     })
+    .Editing(_ => _.Mode(GridEditMode.Form)
+        .AllowAdding(true)
+        .RefreshMode(GridEditRefreshMode.Reshape)
+    )
 )

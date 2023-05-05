@@ -1,5 +1,7 @@
 ﻿namespace TestApp.Services
 {
+    using Newtonsoft.Json;
+    using System.Runtime.CompilerServices;
     using TestApp.Models;
 
     public class PeopleService
@@ -9,9 +11,20 @@
         static PeopleService()
         {
             People = new List<Person>();
+            People = GeneratePeople();
         }
 
-        public List<Person> GeneratePeople()
+        public List<Person> Add(string values)
+        {
+            var model = new Person();
+
+            JsonConvert.PopulateObject(values, model);
+            People.Add(model);
+
+            return People;
+        }
+
+        public static List<Person> GeneratePeople()
         {
             var person1 = new Person()
             {
@@ -112,5 +125,7 @@
 
             return People;
         }
+
+
     }
 }
