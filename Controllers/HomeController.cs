@@ -1,9 +1,7 @@
-﻿using DevExtreme.AspNet.Data;
-using DevExtreme.AspNet.Mvc;
-using Microsoft.AspNetCore.Mvc;
-using TestApp.Models;
+﻿using Microsoft.AspNetCore.Mvc;
 
-namespace TestApp.Controllers
+
+namespace Controllers
 {
     public class HomeController : Controller
     {

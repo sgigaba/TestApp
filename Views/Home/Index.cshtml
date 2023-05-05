@@ -1,20 +1,29 @@
-﻿@using DevExtreme.AspNet.Mvc;
+﻿@model TestApp.Models.Person;
+
 @{
     ViewData["Title"] = "Index";
 }
 
-<h2>Index</h2>
+<img src="~/lib/R.jpg" alt="DeathNote" align="middle" />
 
-@(Html.DevExtreme().DataGrid<TestApp.Models.Person>()
+@(
+Html.DevExtreme().DataGrid<TestApp.Models.Person>()
     .DataSource(ds => ds.Mvc()
-        .Controller("HomeWebAPIController")
+        .Controller("HomeWebAPI")
         .LoadAction("Get")
         .Key("Id")
     )
+    .HoverStateEnabled(true)
+    .Paging(paging => paging.PageSize(10))
+    .Pager(pager => {
+        pager.ShowInfo(true);
+        pager.ShowNavigationButtons(true);
+    })
     .RemoteOperations(true)
     .Columns(columns => {
 
-        columns.AddFor(m => m.Id);
+        columns.AddFor(m => m.Id)
+        .AllowEditing(false);
 
         columns.AddFor(m => m.Name);
 
