@@ -1,7 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-namespace Controllers
+﻿namespace Controllers
 {
+    using Microsoft.AspNetCore.Mvc;
+
     public class HomeController : Controller
     {
         public IActionResult Index()
