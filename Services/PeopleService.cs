@@ -17,8 +17,11 @@
         public List<Person> Add(string values)
         {
             var model = new Person();
+            var lastId = People.Last().Id;
 
             JsonConvert.PopulateObject(values, model);
+            model.Id = lastId + 1;
+            
             People.Add(model);
 
             return People;
