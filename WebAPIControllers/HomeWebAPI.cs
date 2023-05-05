@@ -1,13 +1,13 @@
-﻿using DevExtreme.AspNet.Data;
-using DevExtreme.AspNet.Mvc;
-using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
-using System.Reflection;
-using TestApp.Models;
-using TestApp.Services;
-
-namespace WebAPIControllers
+﻿namespace WebAPIControllers
 {
+    using DevExtreme.AspNet.Data;
+    using DevExtreme.AspNet.Mvc;
+
+    using Microsoft.AspNetCore.Mvc;
+
+    using TestApp.Models;
+    using TestApp.Services;
+
     public class HomeWebAPI : Controller
     {
         private readonly PeopleService peopleService;

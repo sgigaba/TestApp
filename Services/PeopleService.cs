@@ -1,7 +1,7 @@
 ﻿namespace TestApp.Services
 {
     using Newtonsoft.Json;
-    using System.Runtime.CompilerServices;
+
     using TestApp.Models;
 
     public class PeopleService
